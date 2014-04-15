@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FlexWorkoid</string>
+    <string name="title_section1">Day</string>
+    <string name="title_section2">Week</string>
+    <string name="title_section3">Month</string>
+    <string name="action_settings">Settings</string>
+
+</resources>
