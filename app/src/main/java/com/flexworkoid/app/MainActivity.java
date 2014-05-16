@@ -20,6 +20,13 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
+    public static final String PREFS_NAME = "MyPrefsFile";
+    public static final String KEY_CLOCKSTATE = "clockstate";
+    public static final String KEY_CLOCKTIME = "clocktime";
+
+    public static long clockTime = 0;
+    public static boolean clockState = false;
+
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -34,6 +41,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
      * The {@link ViewPager} that will host the section contents.
      */
     ViewPager mViewPager;
+    SQHelper sqhelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,6 +81,8 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
                             .setText(mSectionsPagerAdapter.getPageTitle(i))
                             .setTabListener(this));
         }
+
+        sqhelper = new SQHelper(this);
     }
 
 
@@ -189,4 +199,13 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 }

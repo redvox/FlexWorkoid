@@ -24,13 +24,20 @@
             android:text="Today"
             android:id="@+id/heading"/>
 
-        <com.flexworkoid.app.PieChart
-            xmlns:android="http://schemas.android.com/apk/res/android"
-            android:id="@+id/overviewPieChart"
-            android:layout_width="fill_parent"
-            android:layout_height="100dp"
-            android:layout_gravity="center_vertical" >
-        </com.flexworkoid.app.PieChart>
+        <!--<com.flexworkoid.app.PieChart-->
+            <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:id="@+id/overviewPieChart"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_gravity="center_vertical" >-->
+        <!--</com.flexworkoid.app.PieChart>-->
+
+        <Chronometer
+            android:id="@+id/timeText"
+            style="@style/BigText"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -42,7 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Today"
+                android:text="Work"
                 android:layout_weight="1"
                 android:singleLine="true"
                 android:gravity="left"/>
@@ -129,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Scheduled"
+                android:text="Scheduled Today"
                 android:layout_weight="1"
                 android:singleLine="true"
                 android:gravity="left"/>
@@ -138,24 +145,32 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:text="Something"
+                android:text="This Week (avg)"
                 android:layout_weight="1"
                 android:singleLine="true"
                 android:gravity="right"/>
 
         </LinearLayout>
 
-        <Spinner
-            android:layout_width="264dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinner"
-            android:layout_gravity="center_horizontal"/>
+        <!--<Spinner-->
+            <!--android:layout_width="264dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:id="@+id/spinner"-->
+            <!--android:layout_gravity="center_horizontal"/>-->
 
         <Button
             android:layout_width="264dp"
             android:layout_height="wrap_content"
             android:text="Start Work"
             android:id="@+id/startbutton"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <Button
+            android:layout_width="264dp"
+            android:layout_height="wrap_content"
+            android:text="Stop Work"
+            android:id="@+id/stopbutton"
             android:layout_gravity="center_horizontal"
             />
 
